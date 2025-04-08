@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-08T19:58:59 GST" name="SmokeSuite" finished-at="2025-04-08T19:59:36 GST" duration-ms="37560">
+    <groups>
+    </groups>
+    <test started-at="2025-04-08T19:58:59 GST" name="Smoke Testing" finished-at="2025-04-08T19:59:36 GST" duration-ms="37560">
+      <class name="Testcases.JoinPrivilee">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testcases.JoinPrivilee@503f91c3]" started-at="2025-04-08T19:59:16 GST" name="setUp" finished-at="2025-04-08T19:59:19 GST" duration-ms="2900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="joinprivileeTest()[pri:0, instance:Testcases.JoinPrivilee@503f91c3]" started-at="2025-04-08T19:59:19 GST" name="joinprivileeTest" finished-at="2025-04-08T19:59:25 GST" duration-ms="6107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- joinprivileeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.JoinPrivilee@503f91c3]" started-at="2025-04-08T19:59:25 GST" name="tearDown" finished-at="2025-04-08T19:59:25 GST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.JoinPrivilee -->
+      <class name="Testcases.FitnessTab">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testcases.FitnessTab@7098b907]" started-at="2025-04-08T19:59:05 GST" name="setUp" finished-at="2025-04-08T19:59:08 GST" duration-ms="3266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TestfilterTab()[pri:0, instance:Testcases.FitnessTab@7098b907]" started-at="2025-04-08T19:59:08 GST" name="TestfilterTab" finished-at="2025-04-08T19:59:16 GST" duration-ms="7388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestfilterTab -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.FitnessTab@7098b907]" started-at="2025-04-08T19:59:16 GST" name="tearDown" finished-at="2025-04-08T19:59:16 GST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.FitnessTab -->
+      <class name="Testcases.MapTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testcases.MapTest@626abbd0]" started-at="2025-04-08T19:58:59 GST" name="setUp" finished-at="2025-04-08T19:59:03 GST" duration-ms="4523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="locationTest()[pri:0, instance:Testcases.MapTest@626abbd0]" started-at="2025-04-08T19:59:03 GST" name="locationTest" finished-at="2025-04-08T19:59:05 GST" duration-ms="1663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- locationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.MapTest@626abbd0]" started-at="2025-04-08T19:59:05 GST" name="tearDown" finished-at="2025-04-08T19:59:05 GST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.MapTest -->
+      <class name="Testcases.ResponsiveTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testcases.ResponsiveTest@13526e59]" started-at="2025-04-08T19:59:25 GST" name="setUp" finished-at="2025-04-08T19:59:30 GST" duration-ms="5129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ResponseTest()[pri:0, instance:Testcases.ResponsiveTest@13526e59]" started-at="2025-04-08T19:59:30 GST" name="ResponseTest" finished-at="2025-04-08T19:59:31 GST" duration-ms="1004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResponseTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.ResponsiveTest@13526e59]" started-at="2025-04-08T19:59:31 GST" name="tearDown" finished-at="2025-04-08T19:59:31 GST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.ResponsiveTest -->
+      <class name="Testcases.FilterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testcases.FilterTest@2235eaab]" started-at="2025-04-08T19:59:31 GST" name="setUp" finished-at="2025-04-08T19:59:34 GST" duration-ms="2910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testfilter()[pri:0, instance:Testcases.FilterTest@2235eaab]" started-at="2025-04-08T19:59:34 GST" name="testfilter" finished-at="2025-04-08T19:59:36 GST" duration-ms="1748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfilter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.FilterTest@2235eaab]" started-at="2025-04-08T19:59:36 GST" name="tearDown" finished-at="2025-04-08T19:59:36 GST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.FilterTest -->
+    </test> <!-- Smoke Testing -->
+  </suite> <!-- SmokeSuite -->
+</testng-results>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SmokeSuite">
+  <test thread-count="5" name="Smoke Testing">
+    <classes>
+      <class name="Testcases.MapTest"/>
+      <class name="Testcases.FitnessTab"/>
+      <class name="Testcases.JoinPrivilee"/>
+      <class name="Testcases.ResponsiveTest"/>
+      <class name="Testcases.FilterTest"/>
+    </classes>
+  </test> <!-- Smoke Testing -->
+</suite> <!-- SmokeSuite -->
