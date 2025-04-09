@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "8f66e54a-9587-4c15-8b42-12ff9785b8ca",
+		"name": "GoRest API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40597444"
+	},
+	"item": [
+		{
+			"name": "userpost",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Removed unnecessary semicolon\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Each post belongs to userId 7373665\", function () {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    jsonData.forEach(post => {\r",
+							"        pm.expect(post.userId).to.eql(\"7373665\");\r",
+							"    });\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/public/v2/users/7373665/posts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"7373665",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Fixed syntax \r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Chakor Kaul\");\r",
+							"});\r",
+							"pm.test(\"verify gender\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].gender).to.eql(\"female\");\r",
+							"});\r",
+							"pm.test(\"validate email\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].email).to.eql(\"chakor_kaul@smitham.example\"); \r",
+							"});\r",
+							"pm.test(\"validate Status\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].status).to.eql(\"inactive\"); \r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/public/v2/users",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify deatils",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Fixed Content-Type check\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"verify title\", function () {\r",
+							"    var jsonData = pm.response.text();\r",
+							"    pm.expect(jsonData).to.include(\"Bis carcer deinde attero patria.\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify body\", function () {\r",
+							"    var jsonData = pm.response.text();\r",
+							"    pm.expect(jsonData).to.include(\"Coruscus torrens viscus. Verto deporto dedico. Est voveo vitium. Ambitus acervus qui. Tergo sordeo veritatis. Acerbitas est quia. Officia verbum vindico. Valetudo volubilis tandem. Illum constans virtus. Aperte dolorem facere. Perspiciatis anser itaque. Comburo decumbo contigo. Altus a quia. Sopor strues sto. Comparo sapiente repudiandae.\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Each post has userId, id, title, and body\", function () {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    jsonData.forEach(post => {\r",
+							"     \r",
+							"        pm.expect(post).to.have.property(\"title\");\r",
+							"        pm.expect(post).to.have.property(\"body\");\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has the required Content-Type header\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/public/v2/posts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate Status\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].status).to.eql(\"completed\"); \r",
+							"    });\r",
+							"    pm.test(\"validate Status\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].due_on).to.eql(\"2025-04-26T00:00:00.000+05:30\"); \r",
+							"    });\r",
+							"    pm.test(\"verify title\", function () {\r",
+							"    var jsonData = pm.response.text();\r",
+							"    pm.expect(jsonData).to.include(\"Tripudio caterva celer sperno tondeo tardus ab qui.\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/public/v2/todos",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
